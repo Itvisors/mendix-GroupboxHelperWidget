@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="GroupboxHelperWidget.widget.GroupboxHelperWidget" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>GroupboxHelperWidget</name>
+    <description>Groupbox helper. This widget finds its previous sibling in the DOM tree and moves it to the header of the groupbox.</description>
+    <properties>
+        <property key="attributeValue" type="string" required="false">
+            <caption>Attribute value</caption>
+            <category>Common</category>
+            <description>Value to put on the cssselectorhelper attribute. Use CSS selectors like table[cssselectorhelper=your-attribute-value] to style the node that is placed in the header.</description>
+        </property>
+    </properties>
+
+</widget>

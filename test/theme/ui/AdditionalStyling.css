@@ -1,0 +1,21 @@
+.mx-groupbox-header {
+    color: black;
+    background: #AACDE0;
+}
+
+.mx-datagrid .mx-datagrid-body-table .selected td {
+    background-color: #adddf4;
+}
+
+table[cssselectorhelper=mygroupbox] {
+	border: none;	
+} 
+
+table[cssselectorhelper=mygroupboxTable] {
+	border: none;	
+} 
+
+table[cssselectorhelper=mygroupboxTable] label {
+	padding: 0px;	
+} 
+

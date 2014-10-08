@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.mendix.com/package/1.0/">
+  <modelerProject xmlns="http://www.mendix.com/modelerProject/1.0/">
+    <project />
+    <projectFile path="TestGroupboxHelperWidget.mpr" />
+    <files>
+      <file path="javasource\administration\proxies\Account.java" />
+      <file path="javasource\administration\proxies\AccountPasswordData.java" />
+      <file path="javasource\administration\proxies\microflows\Microflows.java" />
+      <file path="javasource\com\mendix\core\Core.java" />
+      <file path="javasource\myfirstmodule\proxies\SomeEntity.java" />
+      <file path="javasource\system\UserActionsRegistrar.java" />
+      <file path="javasource\system\actions\VerifyPassword.java" />
+      <file path="javasource\system\proxies\DeviceType.java" />
+      <file path="javasource\system\proxies\Error.java" />
+      <file path="javasource\system\proxies\EventStatus.java" />
+      <file path="javasource\system\proxies\FileDocument.java" />
+      <file path="javasource\system\proxies\Image.java" />
+      <file path="javasource\system\proxies\Language.java" />
+      <file path="javasource\system\proxies\ScheduledEventInformation.java" />
+      <file path="javasource\system\proxies\Session.java" />
+      <file path="javasource\system\proxies\SoapFault.java" />
+      <file path="javasource\system\proxies\Statistics.java" />
+      <file path="javasource\system\proxies\TimeZone.java" />
+      <file path="javasource\system\proxies\User.java" />
+      <file path="javasource\system\proxies\UserRole.java" />
+      <file path="javasource\system\proxies\XASInstance.java" />
+      <file path="javasource\system\proxies\microflows\Microflows.java" />
+      <file path="theme\index.html" />
+      <file path="theme\ui\AdditionalStyling.css" />
+      <file path="theme\ui\theme-cerulean\css\bootstrap.min.css" />
+      <file path="theme\ui\theme-cerulean\css\mendix-custom.css" />
+      <file path="theme\ui\theme-cerulean\fonts\glyphicons-halflings-regular.eot" />
+      <file path="theme\ui\theme-cerulean\fonts\glyphicons-halflings-regular.svg" />
+      <file path="theme\ui\theme-cerulean\fonts\glyphicons-halflings-regular.ttf" />
+      <file path="theme\ui\theme-cerulean\fonts\glyphicons-halflings-regular.woff" />
+      <file path="theme\ui\theme-cerulean\js\bootstrap.js" />
+      <file path="theme\ui\theme-cerulean\js\bootstrap.min.js" />
+      <file path="widgets\GroupboxHelperWidget.mpk" />
+      <file path="deployment\data\.policy" />
+      <file path="deployment\data\security.policy" />
+      <file path="deployment\data\database\hsqldb\default\default.properties" />
+      <file path="deployment\data\database\hsqldb\default\default.script" />
+    </files>
+  </modelerProject>
+</package>
