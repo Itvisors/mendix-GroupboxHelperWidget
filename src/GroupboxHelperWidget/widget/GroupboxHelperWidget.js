@@ -19,9 +19,9 @@
 
     require([
 
-        'dojo/_base/declare', 'mxui/widget/_WidgetBase', 'dijit/_Widget', 'dojo/dom-construct'
+        'dojo/_base/declare', 'mxui/widget/_WidgetBase', 'dijit/_Widget', 'dojo/dom-class', 'dojo/dom-construct'
 
-    ], function (declare, _WidgetBase, _Widget, domConstruct) {
+    ], function (declare, _WidgetBase, _Widget, domClass, domConstruct) {
 
         // Declare widget.
         return declare('GroupboxHelperWidget.widget.GroupboxHelperWidget', [ _WidgetBase, _Widget ], {
@@ -42,10 +42,10 @@
                         nodeToMove = thisObj.domNode.previousSibling;
 
                     if (nodeToMove) {
-                        if (node.classList.contains("mx-groupbox-body")) {
+                        if (domClass.contains(node, "mx-groupbox-body")) {
                             if (node.previousSibling) {
                                 headerNode = node.previousSibling;
-                                if (headerNode.classList.contains("mx-groupbox-header")) {
+                                if (domClass.contains(headerNode, "mx-groupbox-header")) {
                                     if (thisObj.attributeValue && thisObj.attributeValue !== "") {
                                         nodeToMove.setAttribute('cssSelectorHelper', thisObj.attributeValue);
                                     }
