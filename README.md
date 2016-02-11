@@ -3,6 +3,8 @@
 ##Description
 Move another element into the header of a groupbox
 
+**As of Mendix 5.19.0 the groupbox allows dynamic content in the header so you may not need this widget anymore.**
+
 ##Typical usage scenario
 - Show attribute data in the group box caption rather than a fixed value.
 
