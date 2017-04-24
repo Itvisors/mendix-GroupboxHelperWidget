@@ -16,7 +16,7 @@ Move another element into the header of a groupbox
 Normal App Store installation
 
 ##Dependencies
-- Mendix 5.8.1 Environment
+- Mendix 6.10.2 Environment
  
 ##Configuration
 The order in which to put the elements in the group box:
