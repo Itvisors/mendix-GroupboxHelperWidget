@@ -3,18 +3,18 @@
 /**
 	GroupboxHelperWidget
 	========================
-	
+
 	@file      : GroupboxHelperWidget.js
-	@version   : 1.0
+	@version   : 2.0
 	@author    : Marcel Groeneweg
 	@date      : 24-4-2017
 	@copyright : ITvisors
 	@license   : Apache License, Version 2.0, January 2004
-	
+
 	Documentation
 	=============
 	Groupbox helper. This widget finds its previous sibling in the DOM tree and moves it to the header of the groupbox.
-	
+
 */
 define([
     "dojo/_base/declare",
@@ -41,12 +41,12 @@ define([
                     headerNode,
                     headerIconNode,
                     node = thisObj.domNode.parentNode,
-                    nodeToMove = thisObj.domNode.previousSibling;
+                    nodeToMove = thisObj.domNode.previousElementSibling;
 
                 if (nodeToMove) {
                     if (domClass.contains(node, "mx-groupbox-body")) {
-                        if (node.previousSibling) {
-                            headerNode = node.previousSibling;
+                        if (node.previousElementSibling) {
+                            headerNode = node.previousElementSibling;
                             if (domClass.contains(headerNode, "mx-groupbox-header")) {
                                 if (thisObj.attributeValue && thisObj.attributeValue !== "") {
                                     nodeToMove.setAttribute("cssSelectorHelper", thisObj.attributeValue);
