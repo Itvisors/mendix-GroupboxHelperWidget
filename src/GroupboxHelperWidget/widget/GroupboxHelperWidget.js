@@ -42,6 +42,9 @@ define([
                         headerIconNode,
                         node = thisObj.domNode.parentNode,
                         nodeToMove = thisObj.domNode.previousElementSibling;
+                    if (nodeToMove.nodeName === "SCRIPT") {
+                        nodeToMove = nodeToMove.previousElementSibling;
+                    }
 
                     if (nodeToMove) {
                         if (domClass.contains(node, "mx-groupbox-body")) {
