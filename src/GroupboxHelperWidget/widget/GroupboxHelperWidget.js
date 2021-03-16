@@ -32,66 +32,61 @@ define([
       postCreate: function () {
         var thisObj = this;
 
-        setTimeout(function () {
-          //            console.log("GroupboxHelperWidget: moveSiblingElement");
-          var headerContainer,
-            headerContent,
-            headerNode,
-            headerIconNode,
-            node = thisObj.domNode.parentNode,
-            nodeToMove = thisObj.domNode.previousElementSibling;
-          if (nodeToMove.nodeName === "SCRIPT") {
-            nodeToMove = nodeToMove.previousElementSibling;
-          }
+        var headerContainer,
+          headerContent,
+          headerNode,
+          headerIconNode,
+          node = thisObj.domNode.parentNode,
+          nodeToMove = thisObj.domNode.previousElementSibling;
+        if (nodeToMove.nodeName === "SCRIPT") {
+          nodeToMove = nodeToMove.previousElementSibling;
+        }
 
-          if (nodeToMove) {
-            if (domClass.contains(node, "mx-groupbox-body")) {
-              if (node.previousElementSibling) {
-                headerNode = node.previousElementSibling;
-                if (domClass.contains(headerNode, "mx-groupbox-header")) {
-                  if (thisObj.attributeValue && thisObj.attributeValue !== "") {
-                    nodeToMove.setAttribute(
-                      "cssSelectorHelper",
-                      thisObj.attributeValue
-                    );
-                  }
-                  headerIconNode = headerNode.firstChild;
-                  headerContainer = document.createElement("div");
-                  headerContainer.className = "flexcontainer";
-                  headerContent = document.createElement("div");
-                  headerContent.className = "flexitem flexitem-main";
-                  headerContent.appendChild(nodeToMove);
+        if (nodeToMove) {
+          if (domClass.contains(node, "mx-groupbox-body")) {
+            if (node.previousElementSibling) {
+              headerNode = node.previousElementSibling;
+              if (domClass.contains(headerNode, "mx-groupbox-header")) {
+                if (thisObj.attributeValue && thisObj.attributeValue !== "") {
+                  nodeToMove.setAttribute(
+                    "cssSelectorHelper",
+                    thisObj.attributeValue
+                  );
+                }
+                headerIconNode = headerNode.firstChild;
+                headerContainer = document.createElement("div");
+                headerContainer.className = "flexcontainer";
+                headerContent = document.createElement("div");
+                headerContent.className = "flexitem flexitem-main";
+                headerContent.appendChild(nodeToMove);
 
-                  headerContainer.appendChild(headerContent);
-                  headerContainer.appendChild(headerIconNode);
-                  domConstruct.place(headerContainer, headerNode, "only");
-                  if (thisObj.attributeValue && thisObj.attributeValue !== "") {
-                    nodeToMove.setAttribute(
-                      "cssSelectorHelper",
-                      thisObj.attributeValue
-                    );
-                    headerContainerTable.setAttribute(
-                      "cssSelectorHelper",
-                      thisObj.attributeValue + "Table"
-                    );
-                  }
-                } else {
-                  console.warn(
-                    "GroupboxHelperWidget: Groupbox header not found"
+                headerContainer.appendChild(headerContent);
+                headerContainer.appendChild(headerIconNode);
+                domConstruct.place(headerContainer, headerNode, "only");
+                if (thisObj.attributeValue && thisObj.attributeValue !== "") {
+                  nodeToMove.setAttribute(
+                    "cssSelectorHelper",
+                    thisObj.attributeValue
+                  );
+                  headerContainerTable.setAttribute(
+                    "cssSelectorHelper",
+                    thisObj.attributeValue + "Table"
                   );
                 }
               } else {
-                console.warn(
-                  "GroupboxHelperWidget: No previous sibling found for groupbox body"
-                );
+                console.warn("GroupboxHelperWidget: Groupbox header not found");
               }
             } else {
-              console.warn("GroupboxHelperWidget: Parent is not a groupbox");
+              console.warn(
+                "GroupboxHelperWidget: No previous sibling found for groupbox body"
+              );
             }
           } else {
-            console.warn("GroupboxHelperWidget: No previous sibling found");
+            console.warn("GroupboxHelperWidget: Parent is not a groupbox");
           }
-        }, 100);
+        } else {
+          console.warn("GroupboxHelperWidget: No previous sibling found");
+        }
       }
     }
   );
