@@ -34,10 +34,8 @@ define([
 
         setTimeout(function () {
           //            console.log("GroupboxHelperWidget: moveSiblingElement");
-          var headerContainerTable,
-            headerContainerTableRow,
-            headerContainerLeftTd,
-            headerContainerRightTd,
+          var headerContainer,
+            headerContent,
             headerNode,
             headerIconNode,
             node = thisObj.domNode.parentNode,
@@ -58,17 +56,15 @@ define([
                     );
                   }
                   headerIconNode = headerNode.firstChild;
-                  headerContainerTable = document.createElement("table");
-                  headerContainerTable.style.width = "100%";
-                  headerContainerTableRow = document.createElement("tr");
-                  headerContainerTable.appendChild(headerContainerTableRow);
-                  headerContainerLeftTd = document.createElement("td");
-                  headerContainerTableRow.appendChild(headerContainerLeftTd);
-                  headerContainerRightTd = document.createElement("td");
-                  headerContainerTableRow.appendChild(headerContainerRightTd);
-                  headerContainerLeftTd.appendChild(nodeToMove);
-                  domConstruct.place(headerContainerTable, headerNode, "only");
-                  headerContainerRightTd.appendChild(headerIconNode);
+                  headerContainer = document.createElement("div");
+                  headerContainer.className = "flexcontainer";
+                  headerContent = document.createElement("div");
+                  headerContent.className = "flexitem flexitem-main";
+                  headerContent.appendChild(nodeToMove);
+
+                  headerContainer.appendChild(headerContent);
+                  headerContainer.appendChild(headerIconNode);
+                  domConstruct.place(headerContainer, headerNode, "only");
                   if (thisObj.attributeValue && thisObj.attributeValue !== "") {
                     nodeToMove.setAttribute(
                       "cssSelectorHelper",
